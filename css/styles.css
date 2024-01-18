@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    font-size: 62.5%; /* fonte padrão deixe de ser 16px e seja 10px */
+}
+
+:root{
+    --brown: #59291C;
+    --white: #FFFFFF;
+    --yellow: #FAAF18;
+    --bege: #F5ECE7;
+    --orange: #ED7902;
+}
+
+.container{
+    width: 100%;
+    max-width: 124.9rem; 
+    margin: 0 auto; /*Definir tudo no centro*/
+    padding: 0 1.5rem; /*esse valor é apenas nas laterais, para deixar espaço em telas menores*/
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    all: unset; /*tira o background do botão*/
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 9rem; /*90px*/
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+header .container { /*This selector targets any element with the class .container that is a descendant of a header element regardless of how deeply nested it is*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    gap: 7.7rem;
+}
+
+header li a { /* selects anchor elements (<a>) that are descendants of list item elements (<li>) that are, in turn, descendants of a header element*/
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+a span{
+    color: var(--brown);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.s-hero{
+    width: 100%;
+    height: 62.3rem;
+    background: linear-gradient(164deg, rgba(239, 225, 218, 0.00) 3.82%, #EFE1DA 90.95%);
+}
+
+.s-hero .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.s-hero .left-container {
+    padding-top: 12rem;
+    flex: 1; /*para ocupar o máximo de espaço que ele conseguir*/
+    max-width: 52.7rem;
+}
+
+.s-hero .left-container h3{
+    color: var(--yellow);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 3.9rem;
+}
+
+.s-hero .left-container h3::after { 
+    content: "";
+    flex: 1;
+    max-width: 29rem;
+    height: 2px;
+    background: url('/assets/img/line.svg') no-repeat center center;
+    display: inline-block;
+}
+
+.s-hero .left-container .value{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 37px;
+    position: relative;
+}
+
+.left-container .value::after{
+    content: "";
+    width: 4.3rem;
+    height: 3.8rem;
+    background: url('/assets/img/arrow-btn.svg') no-repeat center center;
+    position: absolute;
+    right: -56px;
+    top: 30px;
+    
+}
+
+.value h2{
+    color: var(--yellow);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 6.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.value span{
+    color: var(--brown);
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    letter-spacing: -0.371px;
+}
+
+.value button{
+    padding: 18px 42px;
+    background-color: var(--brown);
+    border-radius: 6px;
+    box-shadow: 0px 10px 40px 0px rgba(89, 41, 28, 0.65);
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.right-container{
+    flex: 1;
+    max-width: 52.8rem;
+    height: 663px;
+    background-color: var(--yellow);
+    border-radius: 0px 0px 12px 12px;
+    padding-top: 95px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.right-container .images{
+    position: absolute;
+    width: 684px;
+    height: 492px;
+}
+
+.images img{
+    position: absolute;
+}
+
+.refri{
+    top: 25px;
+    left: 0;
+    z-index: 1;
+}
+
+.fritas{
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.lanche{
+    z-index: 2;
+    left: 52px;
+    bottom: 0;
+}
+
+.bkLogo{
+    bottom: 6px;
+    right: 10px;
+    z-index: 3;
+}
+
+
+.offer{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.offer::before{
+    content: "";
+    width: 8rem;
+    height: 1.4rem;
+    background: url('/assets/img/line-left.svg') no-repeat center center;
+    display: inline-block;
+}
+
+.offer::after{
+    content: "";
+    width: 8rem;
+    height: 1.4rem;
+    background: url('/assets/img/line-right.svg') no-repeat center center;
+    display: inline-block;
+}
+
+.s-offers{
+    width: 100%;
+    height: 200px;
+    background: url("/assets/img/bg-login.png") no-repeat left center;
+    padding-top: 47px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.s-offers .container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.s-offers .container .left-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4.1rem;
+    flex: 1;
+    max-width: 597px;
+}
+
+.s-offers .sub-title{
+    color: var(--white);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.s-offers h2{
+    color: var(--brown);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.s-offers button{
+    flex: 1;
+    border-radius: 12px;
+    background-color: var(--white);
+    margin-right: 3rem;
+    max-width: 528px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    padding: 30px 0;
+}
+
+.s-offers button span {
+    color: #475993;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.s-combos{
+    padding: 70px 0px;
+}
+
+
+.s-combos .highlights{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.s-combos .highlights ul{
+    display: flex;
+    flex: 1;
+    max-width: 922px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.highlights .box{
+    border-radius: 12px;
+    background-color: var(--bege);
+    width: 218px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+/*apenas aplica o css no primeiro filho de highlights*/
+.highlights > .box { 
+    background-color: var(--yellow);
+    width: 263px;
+}
+
+.highlights .box h3{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
